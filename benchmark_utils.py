@@ -9,7 +9,8 @@ from transformers import (AutoModelForCausalLM, AutoTokenizer,
 from typing import List, Optional, Tuple
 
 
-WARMUP_ITERS = 100
+WARMUP_ITERS = 5
+LATENCY_ITERS = 5
 
 def get_args():
     parser = FlexibleArgumentParser(description="Benchmark the throughput.")

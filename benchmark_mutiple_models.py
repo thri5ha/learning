@@ -46,7 +46,7 @@ def get_prompts(n: int, use_beam_search: bool, requests: List[Tuple[str, int, in
     return prompts, sampling_params
 
 
-def benchmark_throughput(prompts, sampling_params) -> float:
+def benchmark_throughput(llm, prompts, sampling_params) -> float:
     
     start = time.perf_counter()
     llm.generate(prompts, sampling_params, use_tqdm=True)
@@ -54,12 +54,12 @@ def benchmark_throughput(prompts, sampling_params) -> float:
 
     return end - start
 
-def benchmark_latency(prompts, sampling_params) -> [float]:
+def benchmark_latency(llm, prompts, sampling_params) -> [float]:
     
     latencies = list()
-    for _ in tqdm(range(args.num_iters), desc="Profiling iterations"):
+    for _ in tqdm(range(LATENCY_ITERS), desc="Profiling iterations"):
         start_time = time.perf_counter()
-        llm.generate(dummy_inputs,
+        llm.generate(prompts,
                         sampling_params=sampling_params,
                         use_tqdm=False)
         end_time = time.perf_counter()
@@ -88,8 +88,8 @@ def main():
     
     prompts, sampling_params = get_prompts(args.n, args.use_beam_search, requests)
     warmup(llm, args.n, args.use_beam_search)
-    elapsed_time = benchmark_throughput(prompts, sampling_params)
-    list_of_elapsed_time = benchmark_latency(prompts, sampling_params)
+    elapsed_time = benchmark_throughput(llm, prompts, sampling_params)
+    list_of_elapsed_time = benchmark_latency(llm, prompts, sampling_params)
     
     total_num_tokens = sum(prompt_len + output_len
                            for _, prompt_len, output_len in requests)
@@ -97,7 +97,7 @@ def main():
     print(f"Throughput: {len(requests) / elapsed_time:.2f} requests/s, "
           f"{total_num_tokens / elapsed_time:.2f} tokens/s")
     
-    latencies = np.array(latencies)
+    latencies = np.array(list_of_elapsed_time)
     percentages = [10, 25, 50, 75, 90, 99]
     percentiles = np.percentile(latencies, percentages)
     print(f'Avg latency: {np.mean(latencies)} seconds')
