@@ -1,7 +1,7 @@
 import json
 import random
 from tqdm import tqdm
-from vllm import LLM
+from vllm import LLM, SamplingParams
 from vllm.engine.arg_utils import EngineArgs
 from argparse import ArgumentParser as FlexibleArgumentParser
 from transformers import (AutoModelForCausalLM, AutoTokenizer,

@@ -2,7 +2,7 @@ import time
 import numpy as np
 from benchmark_utils import *
 
-def warmup(n: int, use_beam_search: bool,batch_size: int= 8, input_len: int = 32, output_len: int = 128):
+def warmup(llm, n: int, use_beam_search: bool,batch_size: int= 8, input_len: int = 32, output_len: int = 128):
     
     sampling_params = SamplingParams(
         n=n,
@@ -28,7 +28,7 @@ def warmup(n: int, use_beam_search: bool,batch_size: int= 8, input_len: int = 32
     print("Warm up done...")
 
 
-def get_prompts(requests: List[Tuple[str, int, int]]):
+def get_prompts(n: int, use_beam_search: bool, requests: List[Tuple[str, int, int]]):
     prompts: List[str] = []
     sampling_params: List[SamplingParams] = []
     for prompt, _, output_len in requests:
@@ -86,8 +86,8 @@ def main():
     args.max_num_batched_tokens, args.distributed_executor_backend,
     args.gpu_memory_utilization, args.download_dir, args.load_format)
     
-    prompts, sampling_params = get_prompts(requests)
-    warmup(args.n, args.use_beam_search)
+    prompts, sampling_params = get_prompts(args.n, args.use_beam_search, requests)
+    warmup(llm, args.n, args.use_beam_search)
     elapsed_time = benchmark_throughput(prompts, sampling_params)
     list_of_elapsed_time = benchmark_latency(prompts, sampling_params)
     
