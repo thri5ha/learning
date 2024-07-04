@@ -1,5 +1,13 @@
+import json
+import random
+from tqdm import tqdm
+from vllm import LLM
 from vllm.engine.arg_utils import EngineArgs
 from argparse import ArgumentParser as FlexibleArgumentParser
+from transformers import (AutoModelForCausalLM, AutoTokenizer,
+                          PreTrainedTokenizerBase)
+from typing import List, Optional, Tuple
+
 
 WARMUP_ITERS = 100
 
@@ -200,7 +208,6 @@ def sample_requests(
 
 def load_model(model: str,
     tokenizer: str,
-    quantization: Optional[str],
     tensor_parallel_size: int,
     seed: int,
     trust_remote_code: bool,
@@ -218,10 +225,9 @@ def load_model(model: str,
     download_dir: Optional[str] = None,
     load_format: str = EngineArgs.load_format,):
 
-     llm = LLM(
+    llm = LLM(
         model=model,
         tokenizer=tokenizer,
-        quantization=quantization,
         tensor_parallel_size=tensor_parallel_size,
         seed=seed,
         trust_remote_code=trust_remote_code,

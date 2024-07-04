@@ -1,9 +1,8 @@
 import time
 import numpy as np
-from vllm import LLM
 from benchmark_utils import *
 
-def warmup(n: int, use_beam_search: bool,batch_size = 8: int, input_len = 32: int, output_len = 128: int):
+def warmup(n: int, use_beam_search: bool,batch_size: int= 8, input_len: int = 32, output_len: int = 128):
     
     sampling_params = SamplingParams(
         n=n,
@@ -78,8 +77,8 @@ def main():
 
     requests = load_requests(args)
     
-    llm = load_model(args.model, args.tokenizer, args.quantization,
-    args.tensor_parallel_size, args.seed, args.n, args.use_beam_search,
+    llm = load_model(args.model, args.tokenizer,
+    args.tensor_parallel_size, args.seed,
     args.trust_remote_code, args.dtype, args.max_model_len,
     args.enforce_eager, args.kv_cache_dtype,
     args.quantization_param_path, args.device,
