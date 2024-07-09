@@ -1,7 +1,7 @@
 from datetime import datetime
 
 MODELS_1B = ['facebook/opt-1.3b']
-MODELS_3B = ['databricks/dolly-v2-3b', 'openlm-research/open_llama_3b_v2']
+MODELS_3B = ['google/gemma-2b',] # 'databricks/dolly-v2-3b', 'openlm-research/open_llama_3b_v2']
 MODELS_7B = []
 
 MODELS = MODELS_3B

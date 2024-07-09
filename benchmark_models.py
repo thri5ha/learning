@@ -122,7 +122,7 @@ def run_iterative_benchmark(session_output_path: str, dataset: list) -> str:
                 destroy_model_parallel()
                 destroy_distributed_environment()
                 del llm
-                torch.cuda.synchronize() 
+                torch.cuda.empty_cache() 
             except Exception as e:
                 print(f"{e}")
                 continue

@@ -75,7 +75,7 @@ def parse_benchmark_results(output_folder):
 
 if __name__ == '__main__':
     
-    benchmark_folder = "benchmark_MAX_BATCHSIZE/2024_07_05_14_01_06"
+    benchmark_folder = "/home/mcw/thrisha/benchmark_1_gpu/2024_07_07_22_58_19"
 
     parse_benchmark_results(benchmark_folder)
     
