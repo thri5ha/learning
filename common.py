@@ -1,19 +1,25 @@
 from datetime import datetime
 
 MODELS_1B = ['facebook/opt-1.3b']
-MODELS_3B = ['google/gemma-2b',] # 'databricks/dolly-v2-3b', 'openlm-research/open_llama_3b_v2']
+MODELS_3B = ['databricks/dolly-v2-3b',] # []'databricks/dolly-v2-3b', 'openlm-research/open_llama_3b_v2','google/gemma-2b]
 MODELS_7B = []
 
 MODELS = MODELS_3B
 
-BATCH_SIZES = [1, 10, 20, 30, 50, 100, 150, 180, 240, 300]
-OUTPUT_TOKEN_LENGTHS = [20, 64, 100, 200, 300]
+# BATCH_SIZES = [1, 10, 20, 30, 50, 100, 150, 180, 240, 300]
 
-NUM_ITERS = 5
 
-WARMUP_ITERS = 5
+# BATCH_SIZES = [10, 20, 30]
+MAX_NUM_SEQS=[4] # [32,64, 96, 128, 160, 192, 224, 256]
 
-TENSOR_PARALLEL_SIZES = [1]
+OUTPUT_TOKEN_LENGTHS = [100]
+
+
+NUM_ITERS = 1
+
+WARMUP_ITERS = 1
+
+TENSOR_PARALLEL_SIZES = [2]
 
 TIMESTAMP = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
 
@@ -34,9 +40,10 @@ LLM_ARGS = {
     'enable_prefix_caching': False,
     'download_dir': None,
     'enable_chunked_prefill': False,
-    'max_num_batched_tokens': None,
+    # 'max_num_batched_tokens': None,
     'load_format': 'auto',
 }
+
 
 SAMPLING_ARGS = {
     'n': 1,
