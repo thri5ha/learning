@@ -1,5 +1,11 @@
 from datetime import datetime
 
+MAX_OUTPUT_TOKENS=120
+MIN_OUTPUT_TOKENS=100
+
+NUM_ITERS = 3
+WARMUP_ITERS = 1
+
 MODELS_1B = ['facebook/opt-1.3b']
 MODELS_3B = ['databricks/dolly-v2-3b',] # []'databricks/dolly-v2-3b', 'openlm-research/open_llama_3b_v2','google/gemma-2b]
 MODELS_7B = []
@@ -8,18 +14,10 @@ MODELS = MODELS_3B
 
 # BATCH_SIZES = [1, 10, 20, 30, 50, 100, 150, 180, 240, 300]
 
-
 # BATCH_SIZES = [10, 20, 30]
 MAX_NUM_SEQS=[4] # [32,64, 96, 128, 160, 192, 224, 256]
 
-OUTPUT_TOKEN_LENGTHS = [100]
-
-
-NUM_ITERS = 1
-
-WARMUP_ITERS = 1
-
-TENSOR_PARALLEL_SIZES = [2]
+TENSOR_PARALLEL_SIZES = [1]
 
 TIMESTAMP = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
 

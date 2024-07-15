@@ -1,0 +1,13 @@
+[
+    {
+        "num_gpus": 1,
+        "model": "databricks/dolly-v2-3b",
+        "batch_size": 192,
+        "num_prompts": 501,
+        "output_len": 100,
+        "latency": 65.1191236070008,
+        "num_output_tokens": 50100,
+        "tokens_per_sec": 769.3592484806394,
+        "requests_per_sec": 7.693592484806394
+    }
+]
