@@ -1,0 +1,92 @@
+[
+    {
+        "num_gpus": 2,
+        "num_ques": 103,
+        "max_output_tokens": 120,
+        "min_ouput_tokens": 100,
+        "batch_size": 1,
+        "latency": 159.0,
+        "tokens_per_sec": 26.0
+    },
+    {
+        "num_gpus": 2,
+        "num_ques": 103,
+        "max_output_tokens": 120,
+        "min_ouput_tokens": 100,
+        "batch_size": 2,
+        "latency": 91.0,
+        "tokens_per_sec": 45.0
+    },
+    {
+        "num_gpus": 2,
+        "num_ques": 103,
+        "max_output_tokens": 120,
+        "min_ouput_tokens": 100,
+        "batch_size": 4,
+        "latency": 56.0,
+        "tokens_per_sec": 74.0
+    },
+    {
+        "num_gpus": 2,
+        "num_ques": 103,
+        "max_output_tokens": 120,
+        "min_ouput_tokens": 100,
+        "batch_size": 8,
+        "latency": 38.0,
+        "tokens_per_sec": 109.0
+    },
+    {
+        "num_gpus": 2,
+        "num_ques": 103,
+        "max_output_tokens": 120,
+        "min_ouput_tokens": 100,
+        "batch_size": 12,
+        "latency": 36.0,
+        "tokens_per_sec": 113.0
+    },
+    {
+        "num_gpus": 2,
+        "num_ques": 103,
+        "max_output_tokens": 120,
+        "min_ouput_tokens": 100,
+        "batch_size": 16,
+        "latency": 29.0,
+        "tokens_per_sec": 143.0
+    },
+    {
+        "num_gpus": 2,
+        "num_ques": 103,
+        "max_output_tokens": 120,
+        "min_ouput_tokens": 100,
+        "batch_size": 20,
+        "latency": 31.0,
+        "tokens_per_sec": 132.0
+    },
+    {
+        "num_gpus": 2,
+        "num_ques": 103,
+        "max_output_tokens": 120,
+        "min_ouput_tokens": 100,
+        "batch_size": 24,
+        "latency": 27.0,
+        "tokens_per_sec": 151.0
+    },
+    {
+        "num_gpus": 2,
+        "num_ques": 103,
+        "max_output_tokens": 120,
+        "min_ouput_tokens": 100,
+        "batch_size": 36,
+        "latency": 25.0,
+        "tokens_per_sec": 164.0
+    },
+    {
+        "num_gpus": 2,
+        "num_ques": 103,
+        "max_output_tokens": 120,
+        "min_ouput_tokens": 100,
+        "batch_size": 40,
+        "latency": 24.0,
+        "tokens_per_sec": 168.0
+    }
+]

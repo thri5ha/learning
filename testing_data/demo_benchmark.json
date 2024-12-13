@@ -1,0 +1,201 @@
+[
+    {
+    "elapsed_time": 3.9746865705936214,
+    "num_requests": 100,
+    "total_num_tokens": 35488,
+    "requests_per_second": 25.159216512779008,
+    "tokens_per_second": 8928.502756055013,
+    "model_name": "facebook_opt_125m_gpu1_bs10_o100",
+    "num_gpus": 1,
+    "max_output_len": 100,
+    "batch_size":10
+    },
+    {
+        "elapsed_time": 1.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 45488,
+        "requests_per_second": 20.159216512779008,
+        "tokens_per_second": 9928.502756055013,
+        "model_name": "facebook_opt_125m_gpu1_bs10_o100",
+        "num_gpus": 1,
+        "max_output_len": 100,
+        "batch_size":16
+    },
+    {
+        "elapsed_time": 0.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 65488,
+        "requests_per_second": 18.159216512779008,
+        "tokens_per_second": 10928.502756055013,
+        "model_name": "facebook_opt_125m_gpu1_bs10_o100",
+        "num_gpus": 1,
+        "max_output_len": 100,
+        "batch_size":18
+    },
+    {
+        "elapsed_time": 6.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 45488,
+        "requests_per_second": 20.159216512779008,
+        "tokens_per_second": 11128.502756055013,
+        "model_name": "facebook_opt_125m_gpu1_bs10_o100",
+        "num_gpus": 2,
+        "max_output_len": 100,
+        "batch_size":10
+    },
+    {
+        "elapsed_time": 5.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 45488,
+        "requests_per_second": 20.159216512779008,
+        "tokens_per_second": 12228.502756055013,
+        "model_name": "facebook_opt_125m_gpu1_bs10_o100",
+        "num_gpus": 2,
+        "max_output_len": 100,
+        "batch_size":16
+    },
+    {
+        "elapsed_time": 3.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 45488,
+        "requests_per_second": 20.159216512779008,
+        "tokens_per_second": 13328.502756055013,
+        "model_name": "facebook_opt_125m_gpu1_bs10_o100",
+        "num_gpus": 2,
+        "max_output_len": 100,
+        "batch_size":18
+    },
+    {
+        "elapsed_time": 3.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 35488,
+        "requests_per_second": 25.159216512779008,
+        "tokens_per_second": 8928.502756055013,
+        "model_name": "llama3_8b",
+        "num_gpus": 1,
+        "max_output_len": 100,
+        "batch_size":10
+    },
+    {
+        "elapsed_time": 1.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 45488,
+        "requests_per_second": 20.159216512779008,
+        "tokens_per_second": 9928.502756055013,
+        "model_name": "llama3_8b",
+        "num_gpus": 1,
+        "max_output_len": 100,
+        "batch_size":16
+    },
+    {
+        "elapsed_time": 0.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 65488,
+        "requests_per_second": 18.159216512779008,
+        "tokens_per_second": 10928.502756055013,
+        "model_name": "llama3_8b",
+        "num_gpus": 1,
+        "max_output_len": 100,
+        "batch_size":18
+    },
+    {
+        "elapsed_time": 1.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 45488,
+        "requests_per_second": 20.159216512779008,
+        "tokens_per_second": 9928.502756055013,
+        "model_name": "llama3_8b",
+        "num_gpus": 2,
+        "max_output_len": 100,
+        "batch_size":10
+    },
+    {
+        "elapsed_time": 1.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 45488,
+        "requests_per_second": 20.159216512779008,
+        "tokens_per_second": 9928.502756055013,
+        "model_name": "llama3_8b",
+        "num_gpus": 2,
+        "max_output_len": 100,
+        "batch_size":16
+    },
+    {
+        "elapsed_time": 1.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 45488,
+        "requests_per_second": 20.159216512779008,
+        "tokens_per_second": 9928.502756055013,
+        "model_name": "llama3_8b",
+        "num_gpus": 2,
+        "max_output_len": 100,
+        "batch_size":18
+    },
+    {
+        "elapsed_time": 3.9746865705936214,
+        "num_requests": 100,
+        "total_num_tokens": 35488,
+        "requests_per_second": 25.159216512779008,
+        "tokens_per_second": 8928.502756055013,
+        "model_name": "llama3_8b",
+        "num_gpus": 1,
+        "max_output_len": 100,
+        "batch_size":10
+        },
+        {
+            "elapsed_time": 1.9746865705936214,
+            "num_requests": 100,
+            "total_num_tokens": 45488,
+            "requests_per_second": 20.159216512779008,
+            "tokens_per_second": 9928.502756055013,
+            "model_name": "llama3_8b",
+            "num_gpus": 1,
+            "max_output_len": 100,
+            "batch_size":16
+        },
+        {
+            "elapsed_time": 0.9746865705936214,
+            "num_requests": 100,
+            "total_num_tokens": 65488,
+            "requests_per_second": 18.159216512779008,
+            "tokens_per_second": 10928.502756055013,
+            "model_name": "llama3_8b",
+            "num_gpus": 1,
+            "max_output_len": 100,
+            "batch_size":18
+        },
+        {
+            "elapsed_time": 1.9746865705936214,
+            "num_requests": 100,
+            "total_num_tokens": 45488,
+            "requests_per_second": 20.159216512779008,
+            "tokens_per_second": 9928.502756055013,
+            "model_name": "llama3_8b",
+            "num_gpus": 2,
+            "max_output_len": 100,
+            "batch_size":10
+        },
+        {
+            "elapsed_time": 1.9746865705936214,
+            "num_requests": 100,
+            "total_num_tokens": 45488,
+            "requests_per_second": 20.159216512779008,
+            "tokens_per_second": 9928.502756055013,
+            "model_name": "llama3_8b",
+            "num_gpus": 2,
+            "max_output_len": 100,
+            "batch_size":16
+        },
+        {
+            "elapsed_time": 1.9746865705936214,
+            "num_requests": 100,
+            "total_num_tokens": 45488,
+            "requests_per_second": 20.159216512779008,
+            "tokens_per_second": 9928.502756055013,
+            "model_name": "llama3_8b",
+            "num_gpus": 2,
+            "max_output_len": 100,
+            "batch_size":18
+        }
+
+]
